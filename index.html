@@ -4,11 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 
-	<link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
-	<link rel="stylesheet" type="text/css" href=" href="https:// maxcdn.bootstrapcdn.com/bootsrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<link rel=" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="./asset/css/style.css">
 	<script type="text/javascript" src="for( var i =0; < arr.length; ++){
-	console.log (array[i]);"></script>
+	console.log (array[i]");></script>
 
 	<script type="text/javascript" src="./asset/javascript/game.js"></script>
 </head>
@@ -17,29 +16,35 @@
 	<div class="container"></div>
 		<h1>Hangman Game</h1>
 		<h2>Ice Cream</h2>
-		<h3>Guess the Flavor</h3>
+		<h3>Guess the Flavor!!!</h3>
 	<div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <div class="column1"><a  href="https://d10jmt30kcky7o.cloudfront.net/images/hangmanicon400.png"></a></div>
-            </div>
+                <div class="column1">
+                	<img class="img-center" img src="http://weclipart.com/gimg/842D874D401BCA51/eating-ice-cream.jpg" alt="istockphoto.com">
             <div class="col-sm-6">
                 <div class="column2">
                 	<ul class="list-group">
     					<li class="list-group-item">Press and Key to start game</li>
-    					<li class="list-group-item">Wins!!</li>
-    					<li class="list-group-item">Correct Word</li>
+    					<br>
+    					<li class="list-group-item">Word</li>
+    					<br>
     					<li class="list-group-item">------</li>
-    					<li class="list-group-item">Number of Guess Remaining</li>
-  						<li class="list-group-item">------</li>	
-  						<li class="list-group-item">Letters Already Guess</li>
-  						<li class="list-group-item">-----------</li>
+    					<br>
+    					<li class="list-group-item">Wrong Guess</li>
+    					<br>
+    					<li class="list-group-item">Number of Guess Left</li>
+    					<br>
+  						<li class="list-group-item">Wins</li>
+  						<br>	
+  						<li class="list-group-item">Losses</li>
+  						
   					</ul>
 				</div>
                 		
 	<script type="text/javascript">
 
-	var word = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+	var doubleword = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 var wordbank =['vanilla','strawbery','chocolate','pecan']
 var chosenWord =" -----";
@@ -47,10 +52,80 @@ var letterinWord =[];
 var numberBlanks = 0;
 var blanksAndSuccesses = [];
 var wrongletters =[];
-var winCount = 0;
+var WinsCount = 0;
 var loseCount = 0;
-var guessesLeft = 0;
+var guessesLeft = 9;
 var rightGuessesCounter = 0;
+
+for(var i = 0; i< numberBlanks; i++) i=0
+{
+	blanksAndSuccesses.push('');
+	document.getbyElementById("wordToGuess").innerHtml=blanksAndSuccesses;
+
+	document.getbyElementById("wordToGuess").innerHtml=blanksAndSuccesses;
+	document.getbyElementById("numGuesses").innerHtml=guessesLeft;
+	document.getbyElementById("winCounter").innerHtml=winCount;
+	document.getbyElementById("loseCounter").innerHtml=looseCount;
+	document.getbyElementById("wrongGuesses").innerHtml=wrongletters;
+
+	console.log(chosenWord);
+}	console.log(letterInWord);
+	console.log(numberBlanks);
+	console.log(blanksAndSuccesses;	
+
+}
+
+function compareLetter(userkey) userkey = "1"
+{
+
+	console.log('working');
+	if(chosenWord.indexOf)(userkey)> -1 userkey = "1"
+		for(var i = 0; i< numberBlanks; i++) i=0
+		{
+			if(letterInWord[i])===userKey) i=0
+		 {
+		 	rightGuessesCounter++;
+		 	blanksAndSuccesses[i] = userKey;
+		 	document.getbyElementById('wordToGuess').innerHtml=blanksAndSuccesses ('')
+
+		 console.log(blanksAndSuccesses);
+		}
+		else
+		{
+			wrongletters.push(userKey);
+			guesses left--;
+
+			document.getbyElementById("numGuesses").innerHtml=guessesLeft;
+			document.getbyElementById("wrongGuesses").innerHtml=wrongletters;
+
+	
+	startGame();
+
+}
+function startGame ()
+{
+	chosenWord=wordBank[Math.floor(Math.random()* wordbank.length)];
+	letterInWord=chosenWord.split('');
+	numberBlanks=letterinWord.length;
+
+
+function winlose()
+{
+	if(rightGuessesCounter=== numberBlanks)
+
+	{
+		winCount++;
+		document.getbyElementById('winCounter'),innerHtml=winCounter;
+		alert("You Win");
+		reset()
+
+	}
+	else if(guessesLeft=== 0)
+	{
+		loseCount++;
+		document.getbyElementById('loseCounter'),innerHtml=winCounter;
+		alert("You loose")
+		reset()
 
 var reset = function(){
 	chosesword = wordbank[Math.floor(Math.random() = wordBank.length)];
@@ -60,7 +135,7 @@ var reset = function(){
 
 	document.onekeyup = (event)
 
-	var keypressed = event.key
+	var letterGuessed = event.key
 	for(var 1=0;<length;i++){
 	console.log("test")
 
@@ -71,7 +146,7 @@ start games();
 {
 
 
-	var words =['vanilla', 'strawberry', 'chocolate',"pecan"];
+	
 
 
             </div>
@@ -83,46 +158,6 @@ start games();
 
 
 
-		
-
-
-	//Use Key Events for letters the Player wil type
-	// Use onkeyup event listening
-	// create a variable for the current key pressed
-	Create a loop that looks through an array
-	Compare the currentakeypressed and see if it equals the letter at the index
-
-	// Press an key to get started
-
-	// Log your wins. Number of times user get the word right.
-	// Create a variable for wins
-	// Set the variable to 0
-		var wins = 0
-	// Number of guesses remaining for users
-	// Create a for guesses
-	// Set the variable to 12 (options)
-
-	// If he player misses a letter, decreased by 1
-		var playersWins = function() {
-		win++;
-	}
-
-	// Display letter users guessed
-	// Get element by ID
-	// append to that element
-	see note on incation
-	// Create a variable for the word
-	// Display a dash, for each letter of the word
-	// Use.length to the length of the word.
-	// Create a for loop that puts as many dashes the are letters
-	$(document).ready(function(){
-
- 	for( var i = 0; i< word.length; i++){
- 		console.log ("The loop ran")
- 		$(."word-one").append("<span>___</span>");
-
- 	// append a new _____ space every time the loops
- }
 	
 </body>
 </html>

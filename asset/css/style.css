@@ -1,7 +1,5 @@
-<style>
 body{ 	
-		background: url
-
+		background: url("http://static3.businessinsider.com/image/58f52b24c75d4a2d008b4e87/heres-the-difference-between-ice-cream-and-other-frozen-desserts.jpg'.");
 }
 .container{
 		background: gray;
@@ -12,10 +10,16 @@ body{
         padding: 15px;
         font-size: 18px;
         min-height: 300px;
-        background: #dbdfe5;
+        background: pink;
         margin-bottom: 20px;
         margin-top: 20px;
-        border-style: bold
+        border-style: bold;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
 
 }
 
@@ -23,7 +27,7 @@ body{
         padding: 30px;
         font-size: 18px;
         min-height: 300px;
-        background: #dbdfe5;
+        background: purple;
         margin-bottom: 10px;
         text-align: center;
         margin-top:  100px
@@ -35,7 +39,7 @@ h1{
     text-align: center;
     margin-bottom: 15px;
     text-decoration: underline;
-    color:pink;
+    color:purple;
 
 }
 
@@ -45,15 +49,16 @@ h2{
 	margin-top: 25px
 	margin-bottom: 15px;
 	text-decoration: underline;
-	color: blue;
+	color: purple;
 }
 h3{
-	font-size: 20px;
+	font-size: 30px;
 	text-align: center;
 	margin-top: 25px;
 	margin-bottom: 15px;
 	text-decoration: underline;
-	color: purple;
+	color: black;
+    font-weight: 100px;
 
 }
 div.placeholder {
